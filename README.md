@@ -118,9 +118,7 @@ Else → ❌ Not Verified
 
 ├── 📄 README.md                # Project documentation
 
-└── 📂 model/                   # Trained model storage
-    |
-    └── siamesemodelv1          # Siamese network weights
+└── siamesemodelv1          # Siamese network weights
 
     
 ---
