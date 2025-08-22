@@ -58,8 +58,10 @@ Improve reliability & robustness
 
 Clone the repository and install dependencies:
 
-git clone https://github.com/your-username/siamese-face-identification.git
-cd siamese-face-identification
+git clone https://github.com/Hariprasadkurra/FACE_VERIFICATION/
+
+cd FACE_VERIFICATION
+
 pip install -r requirements.txt
 
 
