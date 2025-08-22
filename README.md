@@ -1,46 +1,109 @@
+🧑‍💻 Face Identification using Siamese Network
 
-# Face Identification using Siamese Network
+📌 Overview
 
+This project implements a Face Identification System using a Siamese Network architecture.
+Instead of traditional classification, the model focuses on verifying similarity between two faces.
 
-## overview
+👉 The system compares a captured input image against 30 verification images, and grants access if the similarity passes predefined detection and verification thresholds.
 
-This project implements a face identification system using a **Siamese Network**. The system verifies a user's identity by comparing a single input image against a set of 30 verification images. If the similarity score meets the specified detection and verification thresholds, the user is verified.
-### what is Siamese Network
-A Siamese Network is a type of neural network that learns to compare two inputs by computing their feature embeddings and measuring their similarity using a distance metric.
-### Daliy life use case:
-**Smartphone Face Unlock** (Biometric Authentication)
-Used in Android face unlock systems.
+🤔 What is a Siamese Network?
 
-Compares the user's face with stored facial features for secure authentication 
+A Siamese Network is a neural network that learns to measure similarity between two inputs.
 
-## Installation
-pip install tensorflow numpy opencv-python os
+Each input is passed through identical subnetworks that produce embeddings.
 
-## Usage
-1. Run the verification script:
+A distance metric (e.g., Euclidean / Cosine) is used to determine similarity.
 
+This makes it ideal for verification tasks like authentication, signature verification, or one-shot learning.
+
+🔒 Real-World Example: Smartphone Face Unlock
+
+Your face is compared with stored embeddings (not classified).
+
+Provides faster & more secure verification compared to traditional classification.
+
+✨ Features
+
+✅ Real-time webcam verification
+✅ Siamese Network model for image similarity
+✅ Adjustable thresholds for sensitivity control
+✅ Easy dataset management with negative sampling
+✅ Lightweight and portable for real-world use cases
+
+📂 Dataset
+
+We use the Labeled Faces in the Wild (LFW) dataset
+.
+
+Negative Images (different identities) are crucial:
+
+Train the model to recognize differences as well as similarities
+
+Prevent false positives (e.g., random person unlocking a device)
+
+Improve reliability & robustness
+
+⚙️ Installation
+
+Clone the repository and install dependencies:
+
+git clone https://github.com/your-username/siamese-face-identification.git
+cd siamese-face-identification
+pip install -r requirements.txt
+
+requirements.txt
+numpy
+pandas
+matplotlib
+opencv-python
+scikit-learn
+tensorflow>=2.9
+keras
+tqdm
+
+🎮 How to Use
+▶️ Run the Application
 python main.py
 
-2. Using the webcam:
+🎥 Webcam Controls
 
-Press v to capture an image and verify.
+Press v → Capture image & run verification
 
-Press q to quit the application.
+Press q → Quit
 
-3. Verification Process:
+🔍 Verification Process
 
-Captured image is saved as input_image.jpg.
+Captured image is saved as input_image.jpg
 
-The model compares it with 30 verification images.
+Compared against 30 verification images in /verification_images
 
-4. If the similarity score meets the threshold, verification succeeds.
+Siamese Network outputs similarity score
 
-Displays True if verified, else False.
+If score ≥ threshold → ✅ Verified
+Else → ❌ Not Verified
 
-### Dataset Link
-https://www.kaggle.com/datasets/atulanandjha/lfwpeople
+📁 Project Structure
+.
+├── main.py                     # Main verification script
+├── requirements.txt
+├── verification_images/        # 30 reference images
+├── input_image.jpg              # Latest captured image
+├── model/
+│   └── siamesemodelv1           # Trained Siamese network weights
+└── README.md
 
-This above link is for **Negative** images
-#### Why
-Negative images help the **Siamese Network** differentiate between genuine and impostor faces. They improve the model’s **discriminative ability** by ensuring it learns both similarities and differences. This reduces **false positives**, preventing unauthorized users from being verified. Negative samples also **mimic real-world scenarios**, making verification systems more reliable. Finally, they help set an **optimal threshold** for accurate authentication. 🚀
+📜 License
 
+This project is licensed under the MIT License – see the LICENSE
+ file for details.
+
+🤝 Contributing
+
+Contributions are welcome! 🎉
+
+Fork the repo
+
+Create a new branch (feature/my-feature)
+
+Commit changes & open a PR
