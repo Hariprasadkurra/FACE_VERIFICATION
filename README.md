@@ -111,16 +111,15 @@ Else → ❌ Not Verified
 ### 📁 Project Structure
 
 📂 Project Root
-├── 📄 main.py                  # Main verification script
+
+├── 📄 main.ipynb                  # Main verification script
+
 ├── 📄 requirements.txt         # Dependencies list
+
 ├── 📄 README.md                # Project documentation
-│
-├── 📂 verification_images/     # Folder with 30 reference images
-│   └── ...                     # e.g., ref1.jpg, ref2.jpg, ...
-│
-├── 📄 input_image.jpg          # Latest captured image
-│
+
 └── 📂 model/                   # Trained model storage
+
     └── siamesemodelv1          # Siamese network weights
     
 ---
