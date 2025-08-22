@@ -70,12 +70,19 @@ pip install -r requirements.txt
 ### requirements.txt
 
 numpy
+
 pandas
+
 matplotlib
+
 opencv-python
+
 scikit-learn
+
 tensorflow>=2.9
+
 keras
+
 tqdm
 
 ---
@@ -102,15 +109,20 @@ Else → ❌ Not Verified
 ---
 
 ### 📁 Project Structure
-.
-├── main.py                     # Main verification script
-├── requirements.txt
-├── verification_images/        # 30 reference images
-├── input_image.jpg             # Latest captured image
-├── model/
-│   └── siamesemodelv1          # Trained Siamese network weights
-└── README.md
 
+📂 Project Root
+├── 📄 main.py                  # Main verification script
+├── 📄 requirements.txt         # Dependencies list
+├── 📄 README.md                # Project documentation
+│
+├── 📂 verification_images/     # Folder with 30 reference images
+│   └── ...                     # e.g., ref1.jpg, ref2.jpg, ...
+│
+├── 📄 input_image.jpg          # Latest captured image
+│
+└── 📂 model/                   # Trained model storage
+    └── siamesemodelv1          # Siamese network weights
+    
 ---
 
 ### 📜 License
